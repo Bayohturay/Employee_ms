@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        const prompt = require("prompt-sync")({sigint:true})
+        let emp_hr = prompt('Enter your hours work');
+        let emp_r = prompt('Enter your Rate per hour');
+        let emp_basic = emp_hr * emp_r;
+        let bonus = 2/3*emp_basic;
+        let emp_gross = emp_basic + bonus;
+        let tax = 0.3 * emp_gross;
+        let emp_net = emp_gross - tax;
+        document.write('Your net salary is '+ emp_net);
+    </script>
+</body>
+</html>
